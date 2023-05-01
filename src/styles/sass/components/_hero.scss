@@ -1,0 +1,58 @@
+.hero {
+    @include flex(column, center, center);
+    background: radial-gradient(220% 48.2rem at 50% 12.2rem, $coal-mine 75%, transparent 75%) no-repeat;
+    padding: 0 $gutter-horizontal-mobile;
+    position: relative;
+    width: 100%;
+    min-height: 48.2rem;
+    left: 0px;
+    top: 0px;
+
+
+
+    &__text {
+        @include heading-large-mobile;
+        color: $granulated-sugar;
+        margin: 4rem 0;
+    }
+
+    a {
+        margin-bottom: 7rem;
+    }
+
+    &__img {
+        position: absolute;
+        left: 3.6rem;
+        top: 38.9rem;
+    }
+
+    &__background {
+
+        &--1 {
+            position: absolute;
+            z-index: 2;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            height: 0;
+        }
+
+        &--2 {
+            position: absolute;
+            z-index: 2;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            height: 0;
+        }
+
+        &--3 {
+            position: absolute;
+            z-index: 2;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            height: 0;
+        }
+    }
+}

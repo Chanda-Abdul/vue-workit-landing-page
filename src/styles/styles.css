@@ -1,0 +1,324 @@
+/* Media Query Manager 
+    0-600px => Phone
+    600px-900px => Tablet Portrait
+    900px-1200px => Tablet Landscape
+    1200px-1800px => Desktop
+    1800px+ => Large Desktop
+    1em == 16px
+    Order =>
+        => Base and Typography
+        => General Layout + grid
+        => Specific Page Layout
+        => Components
+*/
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: "Manrope", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-color: hsl(150, 100%, 63%);
+  color: currentColor;
+}
+
+ul {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("src/styles/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype supports variations"), url("src/styles/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype-variations");
+  font-weight: 100 200 300 400 500;
+}
+@font-face {
+  font-family: "Fraunces 144pt";
+  src: url("src/styles/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("src/styles/fonts/manrope/Manrope-VariableFont_wght.ttf") format("truetype supports variations"), url("src/styles/fonts/manrope/Manrope-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 200 300 400 500 600 1000;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 5.5rem;
+  width: 13.3rem;
+  text-align: center;
+  letter-spacing: -0.18px;
+  border: none;
+  transition: all 0.2s;
+}
+.btn * {
+  transition: all 300ms ease-in;
+}
+.btn--primary {
+  padding: 1.1rem 2.3rem;
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+  color: hsl(273, 85%, 13%);
+  background-color: hsl(150, 100%, 63%);
+}
+.btn--primary:hover {
+  background-color: hsl(273, 85%, 13%);
+  color: hsl(150, 100%, 63%);
+  border: 2px solid hsl(150, 100%, 63%);
+}
+.btn--secondary {
+  padding: 0 2px 0;
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: hsl(0, 0%, 100%);
+  background-color: transparent;
+  text-decoration: none;
+  border-bottom: 3px solid hsl(150, 100%, 63%);
+}
+.btn--secondary:hover {
+  color: hsl(150, 100%, 63%);
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6.4rem;
+  padding: 6.4rem 1.6rem 7.1rem;
+  background: radial-gradient(250% 103rem at 50% 12rem, hsl(274, 100%, 99%) 75%, transparent 75%) no-repeat;
+  color: hsl(273, 85%, 13%);
+}
+.cta__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  width: 343px;
+}
+.cta__list :not(:last-of-type) {
+  margin-bottom: 4rem;
+}
+.cta__list--item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cta__list--item-heading {
+  font-family: "Fraunces 144pt", serif;
+  font-weight: 600;
+  font-size: 5.6rem;
+  line-height: 6.4rem;
+  text-align: center;
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  margin-top: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+.cta__list--item-text {
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+.cta li {
+  counter-increment: item;
+}
+.cta li::before {
+  content: counter(item);
+  display: block;
+  font-family: "Fraunces 144pt", serif;
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 3.6rem;
+  margin: auto;
+  height: 4.8rem;
+  width: 4.8rem;
+  background: transparent;
+  border-radius: 50%;
+  color: hsl(273, 85%, 13%);
+  border: 1px solid hsl(273, 85%, 13%);
+  padding: 0.5rem 1.6rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(220% 48.2rem at 50% 12.2rem, hsl(273, 85%, 13%) 75%, transparent 75%) no-repeat;
+  padding: 0 1.6rem;
+  position: relative;
+  width: 100%;
+  min-height: 48.2rem;
+  left: 0px;
+  top: 0px;
+}
+.hero__text {
+  font-family: "Fraunces 144pt", serif;
+  font-weight: 600;
+  font-size: 8rem;
+  line-height: 8rem;
+  text-align: center;
+  font-size: 5rem;
+  line-height: 5rem;
+  color: hsl(0, 0%, 100%);
+  margin: 4rem 0;
+}
+.hero a {
+  margin-bottom: 7rem;
+}
+.hero__img {
+  position: absolute;
+  left: 3.6rem;
+  top: 38.9rem;
+}
+.hero__background--1 {
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  height: 0;
+}
+.hero__background--2 {
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  height: 0;
+}
+.hero__background--3 {
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  height: 0;
+}
+
+.social-proof {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem 1.6rem 0;
+  background-color: hsl(0, 0%, 100%);
+}
+.social-proof__detail {
+  position: relative;
+  top: -5.5rem;
+  z-index: 2;
+  background-color: hsl(273, 85%, 13%);
+  padding: 3.1rem;
+  color: hsl(0, 0%, 100%);
+  min-height: 37.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-proof__heading {
+  font-family: "Fraunces 144pt", serif;
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  text-align: center;
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+}
+.social-proof__text {
+  width: 28.1rem;
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 7.4rem;
+  margin-bottom: 6.4rem;
+}
+.footer__logo {
+  margin-bottom: 5.7rem;
+}
+.footer__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer__social--icons:not(:last-of-type) {
+  margin-right: 2.8rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: hsl(273, 85%, 13%);
+  position: absolute;
+  width: 100%;
+  height: 9.5rem;
+  padding: 3.7rem 1.6rem;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=styles.css.map */

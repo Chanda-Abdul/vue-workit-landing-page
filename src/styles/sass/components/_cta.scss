@@ -1,0 +1,53 @@
+.cta {
+    @include flex(column, center, center);
+    margin-top: 6.4rem;
+    padding: 6.4rem $gutter-horizontal-mobile 7.1rem;
+    background: radial-gradient(250% 103rem at 50% 12rem, $ghost-white 75%, transparent 75%) no-repeat;
+    color: $coal-mine;
+
+    &__list {
+        @include flex(column, center, center);
+        list-style-type: none;
+        width: 343px;
+
+        :not(:last-of-type) {
+            margin-bottom: 4rem;
+        }
+
+        &--item {
+            @include flex(column, center, center);
+            text-align: center;
+
+            &-heading {
+                @include heading-medium-mobile;
+                margin-top: 2.4rem;
+                margin-bottom: 1.6rem;
+            }
+
+            &-text {
+                @include body-text-primary-mobile
+            }
+        }
+    }
+
+    li {
+        counter-increment: item;
+    }
+
+    li::before {
+        content: counter(item);
+        display: block;
+        @include heading-extra-small-mobile;
+        margin: auto;
+        height: 4.8rem;
+        width: 4.8rem;
+        background: transparent;
+        border-radius: 50%;
+        color: $coal-mine;
+        border: 1px solid $coal-mine;
+        padding: .5rem 1.6rem;
+
+    }
+
+
+}

@@ -1,0 +1,84 @@
+@mixin heading-large {
+    font-family: $font-display-default;
+    font-weight: 600;
+    font-size: 8rem;
+    line-height: 8rem;
+    text-align: center;
+}
+
+@mixin heading-large-mobile {
+    @include heading-large;
+    font-size: 5rem;
+    line-height: 5rem;
+}
+
+@mixin heading-medium {
+    font-family: $font-display-default;
+    font-weight: 600;
+    font-size: 5.6rem;
+    line-height: 6.4rem;
+    text-align: center;
+}
+
+@mixin heading-medium-mobile {
+    @include heading-medium;
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+}
+
+
+@mixin heading-small {
+    font-family: $font-display-default;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    text-align: center;
+
+}
+
+@mixin heading-small-mobile {
+    @include heading-small;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+}
+
+@mixin heading-extra-small {
+    font-family: $font-display-default;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    text-align: center;
+
+}
+
+@mixin heading-extra-small-mobile {
+    @include heading-extra-small;
+    font-size: 2rem;
+    line-height: 3.6rem;
+}
+
+@mixin body-text-primary {
+    font-family: $font-body-default;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+}
+
+@mixin body-text-primary-mobile {
+    @include body-text-primary;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+
+@mixin body-text-secondary {
+    // @include body-text-primary;
+    // font-size: 1.2rem;
+
+    // & a,
+    // &a:active,
+    // &a:visited {
+    //     color: inherit;
+    //     text-decoration: underline;
+    // }
+}

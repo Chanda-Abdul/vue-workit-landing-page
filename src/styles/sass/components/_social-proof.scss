@@ -1,0 +1,24 @@
+.social-proof {
+    @include flex(column, center, center);
+    margin: 10rem $gutter-horizontal-mobile 0;
+    background-color: $granulated-sugar;
+
+    &__detail {
+        position: relative;
+        top: calc(-26.7rem + 22.8rem - $gutter-horizontal-mobile);
+        z-index: 2;
+        background-color: $coal-mine;
+        padding: 3.1rem;
+        color: $granulated-sugar;
+        min-height: 37.5rem;
+
+        @include flex(column, space-between, center);
+    }
+    &__heading {
+        @include heading-small-mobile;
+    }
+    &__text {
+        width: 28.1rem;
+        @include body-text-primary-mobile;
+    }
+}

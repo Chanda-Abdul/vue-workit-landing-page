@@ -37,7 +37,7 @@ This is a solution to the [Workit landing page challenge on Frontend Mentor](htt
 ### Links
 
 - Solution URL: [here](https://github.com/Chanda-Abdul/vue-workit-landing-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [ere](https://moonlit-bubblegum-fba953.netlify.app/)
 
 ## My process
 
@@ -70,16 +70,16 @@ const proudOfThisFunc = () => {
 
 
 ## Continued development
-
+- [ ] Animations
 #### Add pages for 
-  - [ ] Animations
+  
   - [ ] "Apply For Access"
   - [ ] "Learn More"
 
 ## Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+<!-- - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept. -->
 - 🙌🏾 [Udemy Course: Advanced CSS and Sass: Flexbox, Grid, Animations and More! by Jonas Schmedtmann](https://www.udemy.com/course/advanced-css-and-sass) - Very Helpful for Sass and Responsive 
 - [How to use variable fonts](https://css-tricks.com/newsletter/259-how-to-use-variable-fonts/) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Using CSS Counters for Custom List Number Styling](https://css-tricks.com/css-counters-custom-list-number-styling/) - Getting custom styling on lists isn’t even so tricky anymore, since CSS counters have introduced counter-increment and counter-reset

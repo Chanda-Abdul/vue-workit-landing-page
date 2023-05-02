@@ -2,23 +2,101 @@
     @include flex(column, center, center);
     margin: 10rem $gutter-horizontal-mobile 0;
     background-color: $granulated-sugar;
+    position: relative;
+
+    @include responsive-for(tablet) {
+        margin: 25rem $gutter-horizontal-tablet 0;
+        @include flex(column, flex-end, flex-end);
+
+        &__img {
+            position: absolute;
+            right: calc(67vw - 11.4rem);
+            top: -17.2rem;
+        }
+    }
+
+    @include responsive-for(desktop) {
+        margin: 11rem $gutter-horizontal-desktop;
+        height: 67.7rem;
+        padding-bottom: $gutter-vertical-desktop;
+
+        &__img {
+            height: 47.7rem;
+            width: 47.7rem;
+            left: 0;
+            top: 0;
+        }
+    }
 
     &__detail {
         position: relative;
         top: calc(-26.7rem + 22.8rem - $gutter-horizontal-mobile);
+        width: 100%;
+        @include flex(column, space-between, center);
         z-index: 2;
         background-color: $coal-mine;
         padding: 3.1rem;
         color: $granulated-sugar;
         min-height: 37.5rem;
 
-        @include flex(column, space-between, center);
+        @include responsive-for(tablet) {
+            @include flex(column, center, flex-start);
+            text-align: left;
+            width: 67vw;
+            top: 0;
+            padding: 4.8rem auto auto 5.65rem;
+        }
+
+        @include responsive-for(desktop) {
+            width: 73rem;
+            padding: 6.4rem;
+        }
     }
+
     &__heading {
-        @include heading-small-mobile;
+        @include heading-medium-mobile;
+
+        @include responsive-for(tablet) {
+            @include heading-medium-tablet;
+            margin-bottom: 2.4rem;
+        }
+        @include responsive-for(desktop) {
+            @include heading-medium;
+        }
     }
+
     &__text {
-        width: 28.1rem;
         @include body-text-primary-mobile;
+
+        @include responsive-for(tablet) {
+            @include body-text-primary;
+            max-width: 40rem;
+            text-align: left;
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &__background--pattern {
+        position: absolute;
+        z-index: 2;
+        left: 0px;
+        top: 0px;
+        opacity: 0;
+        height: 0;
+
+        @include responsive-for(tablet) {
+            opacity: 1;
+            height: auto;
+            width: 17.3rem;
+            left: 28rem;
+            top: 30rem;
+        }
+
+        @include responsive-for(desktop) {
+            height: auto;
+            width: auto;
+            left: 42rem;
+            top: 28rem;
+        }
     }
 }

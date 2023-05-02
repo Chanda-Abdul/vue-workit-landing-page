@@ -1,58 +1,133 @@
 .hero {
-    @include flex(column, center, center);
-    background: radial-gradient(220% 48.2rem at 50% 12.2rem, $coal-mine 75%, transparent 75%) no-repeat;
-    padding: 0 $gutter-horizontal-mobile;
+    @include flex(column, flex-start, center);
+    background: radial-gradient(220% 48.2rem at 50% 12.2rem, $coal-mine 75%, $ghost-white 75%) no-repeat;
+    padding: 7rem $gutter-horizontal-mobile 0;
     position: relative;
     width: 100%;
     min-height: 48.2rem;
     left: 0px;
     top: 0px;
 
+    @include responsive-for(tablet) {
+        min-height: 54.2rem;
+        padding: 7rem $gutter-horizontal-tablet 0;
+    }
 
+    @include responsive-for(desktop) {
+        height: 73rem;
+        background: radial-gradient(220% 73rem at 50% 18rem, $coal-mine 75%, $ghost-white 75%) no-repeat;
+    }
 
     &__text {
         @include heading-large-mobile;
         color: $granulated-sugar;
         margin: 4rem 0;
+
+        @include responsive-for(tablet) {
+            max-width: 57.3rem;
+            padding: 0 6rem 0 6rem;
+            @include heading-large-tablet;
+            text-align: center;
+        }
+
+        @include responsive-for(desktop) {
+            @include heading-large;
+            width: 63.5rem;
+            padding: $gutter-vertical-desktop 0 0;
+            text-align: center;
+        }
     }
 
     a {
         margin-bottom: 7rem;
+        z-index: 4;
+
+        @include responsive-for(desktop) {
+            margin-bottom: 15rem;
+        }
+
+        @include responsive-for(tablet) {
+            margin-bottom: 9.6rem;
+        }
     }
 
     &__img {
         position: absolute;
-        left: 3.6rem;
+        left: calc(50vw - (32rem / 2));
         top: 38.9rem;
+
+        @include responsive-for(tablet) {
+            height: 29.6rem;
+            width: 51.4rem;
+            left: calc(50vw - (51.4rem / 2));
+            top: 39.2rem;
+        }
+
+        @include responsive-for(desktop) {
+            top: 51.4rem;
+            height: 44.1rem;
+            width: 76.7rem;
+            left: calc(50vw - (76.7rem / 2));
+        }
     }
 
-    &__background {
+    &__background-patterns {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        overflow-x: hidden;
 
-        &--1 {
+        @include responsive-for(tablet) {
+            width: 100%;
+            height: 54rem;
+        }
+
+        @include responsive-for(desktop) {
+            height: 73rem;
+        }
+
+        &--1,
+        &--2 {
             position: absolute;
-            z-index: 2;
             left: 0px;
             top: 0px;
             opacity: 0;
             height: 0;
+        }
+
+        &--1 {
+            @include responsive-for(tablet) {
+                opacity: 1;
+                left: calc(-27rem + 10rem);
+                top: 13rem;
+                height: 21.5rem;
+                width: 27rem;
+            }
+
+            @include responsive-for(desktop) {
+                height: auto;
+                width: auto;
+                left: -14rem;
+                top: 13.2rem;
+            }
         }
 
         &--2 {
-            position: absolute;
-            z-index: 2;
-            left: 0px;
-            top: 0px;
-            opacity: 0;
-            height: 0;
-        }
+            @include responsive-for(tablet) {
+                opacity: 1;
+                left: calc(100vw - 8rem);
+                top: 25rem;
+                height: 11.2rem;
+                width: 14.1rem;
+            }
 
-        &--3 {
-            position: absolute;
-            z-index: 2;
-            left: 0px;
-            top: 0px;
-            opacity: 0;
-            height: 0;
+            @include responsive-for(desktop) {
+                height: auto;
+                width: auto;
+                left: calc(100vw - 9rem);
+                top: 37rem;
+            }
         }
     }
 }

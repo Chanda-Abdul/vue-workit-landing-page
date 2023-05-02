@@ -14,7 +14,14 @@
         tester for our app and kickstart your company. Apply for access below and I’ll be in touch
         to schedule a call.
       </p>
-      <a class="btn--primary">Apply for access</a>
+      <a class="link--primary">Apply for access</a>
+        <img
+      alt="background 3"
+      class="social-proof__background--pattern"
+      src="../assets/images/bg-pattern-3.svg"
+      width="100"
+      height="100"
+    />
     </div>
   </section>
 </template>

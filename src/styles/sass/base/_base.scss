@@ -1,10 +1,5 @@
 body {
     min-height: 100vh;
- 
-    // color: var(--color-text);
-    // background: var(--color-background);
-    // transition: color 0.5s, background-color 0.5s;
-    line-height: 1.6;
     font-size: $font-size-default;
     font-family: $font-body-default;
     text-rendering: optimizeLegibility;
@@ -15,12 +10,6 @@ body {
   .logo {
     display: block;
     margin: 0 auto 2rem;
-  }
-
-  a{
-    text-decoration: underline;
-    text-decoration-color: $eucaplyptus;
-    color: currentColor;
   }
 
   ul{

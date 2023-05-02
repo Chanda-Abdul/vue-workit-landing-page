@@ -1,31 +1,88 @@
 .cta {
     @include flex(column, center, center);
-    margin-top: 6.4rem;
-    padding: 6.4rem $gutter-horizontal-mobile 7.1rem;
-    background: radial-gradient(250% 103rem at 50% 12rem, $ghost-white 75%, transparent 75%) no-repeat;
+    padding: 12.8rem $gutter-horizontal-mobile 7.1rem;
+    background: radial-gradient(200% 110rem at 50% 12rem, $ghost-white 75%, $granulated-sugar 75%) no-repeat;
     color: $coal-mine;
+
+    @include responsive-for(tablet) {
+        background: radial-gradient(200% 92rem at 50% 10rem, $ghost-white 75%, $granulated-sugar 75%) no-repeat;
+        padding: 12.8rem $gutter-horizontal-tablet 7.1rem;
+    }
+
+    @include responsive-for(desktop) {
+        background: radial-gradient(200% 70rem at 50% 10rem, $ghost-white 75%, $granulated-sugar 75%) no-repeat;
+        padding: 12.8rem $gutter-horizontal-desktop 7.1rem;
+    }
 
     &__list {
         @include flex(column, center, center);
         list-style-type: none;
-        width: 343px;
+        width: 34.3rem;
+
+        @include responsive-for(tablet) {
+            margin-top: 5.6rem;
+            width: 100%;
+        }
+
+        @include responsive-for(desktop) {
+            @include flex(row, center, flex-start);
+            margin-top: 9rem;
+            padding: $gutter-vertical-desktop;
+        }
 
         :not(:last-of-type) {
             margin-bottom: 4rem;
+
+            @include responsive-for(tablet) {
+                margin-bottom: 4.8rem;
+            }
+
+            @include responsive-for(desktop) {
+                margin-right: 2.6rem;
+            }
         }
 
         &--item {
             @include flex(column, center, center);
             text-align: center;
 
+            @include responsive-for(tablet) {
+                @include flex(column, center, flex-start);
+                position: relative;
+                padding-left: calc(4.8rem + 3.2rem);
+            }
+
+            @include responsive-for(desktop) {
+                @include flex(column, center, center);
+                padding-left: 0;
+                padding-top: calc(4.8rem);
+            }
+
             &-heading {
-                @include heading-medium-mobile;
+                @include heading-small-mobile;
                 margin-top: 2.4rem;
                 margin-bottom: 1.6rem;
+
+                @include responsive-for(desktop) {
+                    @include heading-small;
+                    width: 35.4rem;
+                    text-align: center;
+                }
             }
 
             &-text {
-                @include body-text-primary-mobile
+                @include body-text-primary-mobile;
+                @include responsive-for(tablet) {
+                    @include body-text-primary-tablet;
+                    width: 49.3rem;
+                    text-align: left;
+                }
+
+                @include responsive-for(desktop) 
+                { @include body-text-primary;
+                    width: 35.4rem;
+                    text-align: center;
+                }
             }
         }
     }
@@ -36,7 +93,7 @@
 
     li::before {
         content: counter(item);
-        display: block;
+        display: inline-block;
         @include heading-extra-small-mobile;
         margin: auto;
         height: 4.8rem;
@@ -47,7 +104,18 @@
         border: 1px solid $coal-mine;
         padding: .5rem 1.6rem;
 
+        @include responsive-for(tablet) {
+            @include heading-extra-small-tablet;
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+
+        @include responsive-for(desktop) {
+            @include heading-extra-small;
+            top: 0;
+            margin: auto;
+            left: calc((35.4rem / 2) - 4.8rem);
+        }
     }
-
-
 }

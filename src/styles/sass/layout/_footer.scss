@@ -1,8 +1,14 @@
 .footer {
     @include flex(column, space-between, center);
-    padding-top: 7.4rem;
-    margin-bottom: 6.4rem;
+    margin: 7.4rem auto 6.4rem;
 
+    @include responsive-for(tablet) {
+        margin: 8rem auto 12rem;
+    }
+
+    @include responsive-for(desktop) {
+        margin: 6rem auto 11rem;
+    }
     &__logo {
         margin-bottom: 5.7rem
     }

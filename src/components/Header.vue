@@ -7,6 +7,6 @@
       width="96"
       height="25"
     />
-    <a href="#" class="header__link btn--secondary">Apply for access</a>
+    <a href="#" class="header__link link--secondary">Apply for access</a>
   </header>
 </template>

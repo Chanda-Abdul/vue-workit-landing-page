@@ -1,5 +1,6 @@
 .hero {
     @include flex(column, flex-start, center);
+    // TO-DO => change to clip-path
     background: radial-gradient(220% 48.2rem at 50% 12.2rem, $coal-mine 75%, $ghost-white 75%) no-repeat;
     padding: 7rem $gutter-horizontal-mobile 0;
     position: relative;
@@ -15,6 +16,7 @@
 
     @include responsive-for(desktop) {
         height: 73rem;
+        // TO-DO => change to clip-path
         background: radial-gradient(220% 73rem at 50% 18rem, $coal-mine 75%, $ghost-white 75%) no-repeat;
     }
 

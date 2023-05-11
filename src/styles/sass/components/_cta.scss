@@ -1,15 +1,18 @@
 .cta {
     @include flex(column, center, center);
     padding: 12.8rem $gutter-horizontal-mobile 7.1rem;
+    // TO-DO => change to clip-path
     background: radial-gradient(200% 110rem at 50% 12rem, $ghost-white 75%, $granulated-sugar 75%) no-repeat;
     color: $coal-mine;
 
     @include responsive-for(tablet) {
+        // TO-DO => change to clip-path
         background: radial-gradient(200% 92rem at 50% 10rem, $ghost-white 75%, $granulated-sugar 75%) no-repeat;
         padding: 12.8rem $gutter-horizontal-tablet 7.1rem;
     }
 
     @include responsive-for(desktop) {
+        // TO-DO => change to clip-path
         background: radial-gradient(200% 70rem at 50% 10rem, $ghost-white 75%, $granulated-sugar 75%) no-repeat;
         padding: 12.8rem $gutter-horizontal-desktop 7.1rem;
     }
@@ -72,14 +75,15 @@
 
             &-text {
                 @include body-text-primary-mobile;
+
                 @include responsive-for(tablet) {
                     @include body-text-primary-tablet;
                     width: 49.3rem;
                     text-align: left;
                 }
 
-                @include responsive-for(desktop) 
-                { @include body-text-primary;
+                @include responsive-for(desktop) {
+                    @include body-text-primary;
                     width: 35.4rem;
                     text-align: center;
                 }
